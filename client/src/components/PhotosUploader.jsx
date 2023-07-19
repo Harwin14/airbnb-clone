@@ -15,7 +15,7 @@ export const PhotosUploader = ({addedPhotos, onChange}) => {
     const uploadPhoto = (e) => {
         const files = e.target.files;
         const data = new FormData();
-        for (let i = 0; i < files.length; i++) { 
+        for (let i = 0; i < files.length; i++) {  
             data.append("photos", files[i]);
         }
         axios
