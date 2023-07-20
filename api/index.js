@@ -143,7 +143,6 @@ app.post("/places", (req, res) => {
             CheckOut,
             maxGuests,
         });
-        console.log('wkwk',placeDoc);
         res.json(placeDoc);
     });
 });
@@ -190,8 +189,6 @@ app.put("/places", async (req, res) => {
                 checkOut,
                 maxGuests,
             });
-        console.log('wkwk',placeDoc);
-
             await placeDoc.save();
             res.json("ok");
         }
