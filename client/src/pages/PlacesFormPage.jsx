@@ -66,7 +66,6 @@ export default function PlacesFormPage() {
       maxGuests,
       price
     };
-    console.log("ini datanya", placeData);
     if (id) {
       // update
       const put = await axios.put("/places", { id, ...placeData });

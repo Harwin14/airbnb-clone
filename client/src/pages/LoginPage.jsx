@@ -20,7 +20,6 @@ export default function LoginPage() {
             alert("Login success");
             setRedirect(true);
         } catch (error) {
-            console.log(error);
             alert("Login failed");
         }
     };
