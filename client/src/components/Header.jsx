@@ -5,7 +5,7 @@ import { UserContext } from "../UserContext";
 export default function Header() {
     const { user } = useContext(UserContext);
     return (
-        <div>
+        <div >
             <header className="flex justify-between">
                 <Link to={'/'} className="flex items-center gap-1">
                     <svg

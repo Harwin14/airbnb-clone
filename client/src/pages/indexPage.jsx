@@ -6,7 +6,7 @@ export default function IndexPage() {
   const [places, setPlaces] = useState([]);
   useEffect(() => {
     axios.get("/places").then((response) => {
-      setPlaces(response.data);
+      setPlaces([...response.data,...response.data,...response.data]);
     });
   }, []);
   return (
@@ -17,7 +17,7 @@ export default function IndexPage() {
             {place.photos?.[0] && (
               <div className="bg-gray-500 mb-2 rounded-2xl flex">
                 <img
-                  className="rounded-2xl object-cover aspect-square"
+                  className="rounded-2xl object-cover aspect-square hover:brightness-75"
                   src={"http://localhost:4000/uploads/" + place.photos?.[0]}
                   alt="places photo"
                 />
