@@ -47,7 +47,7 @@ app.post("/register", async (req, res) => {
 
   try {
     const userDoc = await User.create({
-      name,
+      name, 
       email,
       password: bcrypt.hashSync(password, bcryptSalt),
     });
